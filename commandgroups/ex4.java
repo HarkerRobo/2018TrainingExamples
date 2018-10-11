@@ -1,5 +1,5 @@
 public class Autonomous extends CommandGroup {
-	public AutonomousCommand () {
+	public Autonomous () {
 		this.addSequential(new MoveArmPosition(RobotMap.ARM_DOWN));
 
 		CommandGroup grabCubeBackUp = new CommandGroup();
