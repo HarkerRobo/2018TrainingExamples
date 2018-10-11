@@ -1,5 +1,5 @@
 public class Autonomous extends CommandGroup {
-    public AutonomousCommand () {
+    public Autonomous () {
         CommandGroup driveForward = new CommandGroup();
             driveForward.addSequential(new DriveWithVelocityTimed(1, 2));
             driveForward.addSequential(new TurnRobotTimed(-1, 3));
