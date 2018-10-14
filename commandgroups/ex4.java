@@ -25,7 +25,7 @@ public class Autonomous extends CommandGroup {
 						printEncoderCounts.addSequential (new PrintCommand(Robot.getDrivetrain().getRightTalon().getSelectedSensorPosition(RobotMap.PID_PRIMARY)));
 					lowerArmPrintEncoderCounts.addParallel(printEncoderCounts);
 				lowerArmPrintCloseClaw.addSequential(lowerArmPrintEncoderCounts);
-				lowerArmCloseClaw.addSequential(new MoveClawPosition(RobotMap.CLAW_CLOSED));
+				lowerArmPrintCloseClaw.addSequential(new MoveClawPosition(RobotMap.CLAW_CLOSED));
 			grabNextCube.addParallel(lowerArmPrintCloseClaw);
 		this.addSequential(grabNextCube);
 	}
